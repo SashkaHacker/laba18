@@ -25,7 +25,10 @@ if __name__ == "__main__":
         print(e)
 
     lst_ok, lst_not_ok = list(set(lst_ok)), list(set(lst_not_ok))
-    print(f"Слова, соответствующие правилу: {lst_ok}\nДлина" f" списка: {len(lst_ok)}")
+    print(
+        f"Слова, соответствующие правилу: {lst_ok}\nДлина"
+        f" списка: {len(lst_ok)}"
+    )
     print(
         f"Слова, не соответствующие правилу: {lst_not_ok}\nДлина"
         f" списка: {len(lst_not_ok)}"

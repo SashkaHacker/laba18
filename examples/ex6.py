@@ -14,4 +14,7 @@ if __name__ == "__main__":
             " valid character code points.",
             file=fileptr,
         )
-        print("In Unicode using one to four one-byte (8-bit) code units.", file=fileptr)
+        print(
+            "In Unicode using one to four one-byte (8-bit) code units.",
+            file=fileptr,
+        )
