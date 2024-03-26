@@ -4,6 +4,7 @@
 
 import sys
 
+
 if __name__ == "__main__":
     for idx, arg in enumerate(sys.argv):
         print(f"Argument #{idx} is {arg}")
