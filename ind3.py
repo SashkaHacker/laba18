@@ -4,30 +4,22 @@
 import os
 
 
-def main(directory):
-    file_types = {
-        ".docx": "Documents",
-        ".pdf": "Documents",
-        ".jpg": "Images",
-        ".jpeg": "Images",
-        ".png": "Images",
-        ".mp3": "Audio",
-        ".wav": "Audio",
-        ".mp4": "Video",
-        ".avi": "Video",
-    }
+# Напишите скрипт на Python, который будет сканировать заданную
+# директорию, считывать все файлы и папки в ней, создавать
+# текстовый файл directory_contents.txt с этим списком.
 
-    for filename in os.listdir(directory):
-        file_extension = os.path.splitext(filename)[1].lower()
-        if file_extension in file_types:
-            new_dir = os.path.join(directory, file_types[file_extension])
-            os.makedirs(new_dir, exist_ok=True)
-            os.rename(
-                os.path.join(directory, filename),
-                os.path.join(new_dir, filename),
-            )
 
-    print("Файлы были успешно организованы по категориям.")
+def main(directory_path):
+    directory_contents = os.listdir(directory_path)
+
+    with open("directory_contents.txt", "w") as file:
+        for item in directory_contents:
+            file.write(f"{item}\n")
+
+    print(
+        f"Список содержимого директории '{directory_path}'"
+        f" записан в файл 'directory_contents.txt'."
+    )
 
 
 if __name__ == "__main__":

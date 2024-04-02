@@ -10,7 +10,8 @@ if __name__ == "__main__":
             lst_of_lines = f.readlines()
             for i in lst_of_lines:
                 words = i.split()
-                if [True for j in words if j in lst_of_int]:
+                flag = list(filter(lambda x: x in lst_of_int, words))
+                if not flag:
                     print(i[:-1])
     except Exception:
         print("There is no file with that name")

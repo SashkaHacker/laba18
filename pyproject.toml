@@ -1,2 +1,6 @@
 [tool.black]
 line-length = 80
+[settings]
+include_trailing_comma = true
+line_length = 80
+lines_after_imports = 2
